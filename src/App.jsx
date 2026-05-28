@@ -294,7 +294,7 @@ export default function App() {
   ];
 
   return (
-    <div style={{ fontFamily: "'Georgia', serif", background: C.offWhite, color: C.charcoal, minHeight: "100vh" }}>
+    <div style={{ fontFamily: "'DM Sans', sans-serif", background: C.offWhite, color: C.charcoal, minHeight: "100vh" }}>
       <style>{`
         
         * { box-sizing: border-box; }
@@ -310,9 +310,9 @@ export default function App() {
       {/* TOP NAV */}
       <div style={{ background: "#fff", borderBottom: `1px solid ${C.tan}`, padding: "12px 24px", display: "flex", alignItems: "center", gap: 10 }}>
         <span style={{ fontSize: 22 }}>🌿</span>
-        <span className="dm" style={{ fontWeight: 700, fontSize: 16, color: C.darkGreen, letterSpacing: "-0.01em" }}>Eddy Out</span>
-        <span className="dm" style={{ fontSize: 13, color: C.sage, fontWeight: 400 }}>Sustainability Consulting</span>
-        <span className="dm" style={{ fontSize: 12, color: C.textLight, marginLeft: 4 }}>· Bozeman, MT</span>
+        <span className="dm" style={{ fontWeight: 800, fontSize: 20, color: C.darkGreen, letterSpacing: "-0.02em" }}>Green Forks</span>
+        <span className="dm" style={{ fontSize: 14, color: C.sage, fontWeight: 500 }}>by Eddy Out</span>
+        <span className="dm" style={{ fontSize: 12, color: C.textLight, marginLeft: 2 }}>· Sustainability Consulting · Bozeman, MT</span>
       </div>
 
       {/* HERO */}
@@ -320,9 +320,9 @@ export default function App() {
         <div style={{ position: "absolute", inset: 0, background: `radial-gradient(ellipse at 25% 70%, ${C.midGreen}55 0%, transparent 55%), radial-gradient(ellipse at 75% 20%, ${C.sage}33 0%, transparent 50%)` }} />
         <div style={{ position: "relative", maxWidth: 680, margin: "0 auto" }}>
           <p className="dm" style={{ fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: C.lightSage, marginBottom: 20, fontWeight: 600 }}>
-            Eddy Out Sustainability Consulting · Bozeman, Montana
+            Green Forks by Eddy Out · Bozeman, Montana
           </p>
-          <h1 className="pf" style={{ fontSize: "clamp(28px, 5vw, 50px)", fontWeight: 400, color: C.cream, margin: "0 0 18px", lineHeight: 1.2 }}>
+          <h1 className="dm" style={{ fontSize: "clamp(28px, 5vw, 50px)", fontWeight: 800, color: C.cream, margin: "0 0 18px", lineHeight: 1.15 }}>
             You're already doing the work.<br />
             <em style={{ color: C.mint }}>Let's get you recognized for it.</em>
           </h1>
@@ -339,7 +339,7 @@ export default function App() {
 
       {/* RECOGNITION BAND */}
       <div style={{ background: C.sand, borderBottom: `1px solid ${C.tan}`, padding: "28px 24px", textAlign: "center" }}>
-        <p className="pf" style={{ fontSize: 18, fontStyle: "italic", color: C.darkGreen, margin: "0 0 8px" }}>
+        <p className="dm" style={{ fontSize: 17, fontStyle: "italic", color: C.darkGreen, margin: "0 0 8px", fontWeight: 400, lineHeight: 1.65 }}>
           "Bozeman's restaurant community is already leading on sustainability — farm-to-table sourcing, composting, community partnerships, local supply chains. We exist to help you document it, formalize it, and get the recognition you deserve."
         </p>
         <p className="dm" style={{ fontSize: 13, color: C.textLight, margin: 0 }}>— Garrett Wright, Principal Consultant</p>
@@ -378,7 +378,7 @@ export default function App() {
             </div>
 
             <div style={{ marginTop: 32 }}>
-              <h3 className="pf" style={{ fontSize: 22, fontWeight: 400, color: C.darkGreen, marginBottom: 20 }}>Our Team</h3>
+              <h3 className="dm" style={{ fontSize: 22, fontWeight: 700, color: C.darkGreen, marginBottom: 20 }}>Our Team</h3>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
                 {[
                   {
@@ -398,7 +398,7 @@ export default function App() {
                 ].map((member, i) => (
                   <div key={i} style={{ background: "#fff", border: `1px solid ${C.tan}`, borderRadius: 12, padding: "24px 20px", textAlign: "center" }}>
                     <div style={{ fontSize: 48, marginBottom: 12 }}>{member.icon}</div>
-                    <h4 className="pf" style={{ fontSize: 18, fontWeight: 600, color: C.darkGreen, margin: "0 0 3px" }}>{member.name}</h4>
+                    <h4 className="dm" style={{ fontSize: 18, fontWeight: 700, color: C.darkGreen, margin: "0 0 3px" }}>{member.name}</h4>
                     <p className="dm" style={{ fontSize: 13, color: C.sage, margin: "0 0 12px", fontWeight: 500 }}>{member.title}</p>
                     <p className="dm" style={{ fontSize: 13, color: C.textMed, lineHeight: 1.6, margin: "0 0 14px", fontWeight: 300 }}>{member.bio}</p>
                     <div style={{ borderTop: `1px solid ${C.tan}`, paddingTop: 12, marginTop: 14 }}>
@@ -410,7 +410,7 @@ export default function App() {
             </div>
 
             <div style={{ marginTop: 32, background: C.darkGreen, borderRadius: 12, padding: "28px 24px", textAlign: "center" }}>
-              <h3 className="pf" style={{ fontSize: 20, fontWeight: 400, color: C.cream, margin: "0 0 10px" }}>Built in Bozeman, for Bozeman</h3>
+              <h3 className="dm" style={{ fontSize: 20, fontWeight: 700, color: C.cream, margin: "0 0 10px" }}>Built in Bozeman, for Bozeman</h3>
               <p className="dm" style={{ fontSize: 14, color: "#b8d4c0", lineHeight: 1.7, fontWeight: 300, margin: "0 0 10px" }}>
                 Eddy Out Sustainability Consulting is locally owned and operated. We eat at local restaurants, we shop at local farmers markets, and we're invested in Bozeman's food community. That's not just marketing — it shapes how we work.
               </p>
@@ -455,7 +455,7 @@ export default function App() {
                 { stat: "2×", label: "Food cost basis you can deduct when donating surplus" },
               ].map((s, i) => (
                 <div key={i} style={{ background: C.darkGreen, borderRadius: 10, padding: "20px 16px", textAlign: "center" }}>
-                  <div className="pf" style={{ fontSize: 38, color: C.gold, lineHeight: 1, marginBottom: 6 }}>{s.stat}</div>
+                  <div className="dm" style={{ fontSize: 38, fontWeight: 800, color: C.gold, lineHeight: 1, marginBottom: 6 }}>{s.stat}</div>
                   <p className="dm" style={{ fontSize: 12, color: C.mint, margin: 0, lineHeight: 1.5, fontWeight: 300 }}>{s.label}</p>
                 </div>
               ))}
@@ -463,7 +463,7 @@ export default function App() {
 
             {/* Process */}
             <div style={{ marginTop: 40 }}>
-              <h3 className="pf" style={{ fontSize: 22, fontWeight: 400, color: C.darkGreen, marginBottom: 20 }}>How it works</h3>
+              <h3 className="dm" style={{ fontSize: 22, fontWeight: 700, color: C.darkGreen, marginBottom: 20 }}>How it works</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
                 {process.map((p, i) => (
                   <div key={i} style={{ display: "flex", gap: 18, position: "relative" }}>
@@ -482,7 +482,7 @@ export default function App() {
 
             {/* FAQ */}
             <div style={{ marginTop: 40 }}>
-              <h3 className="pf" style={{ fontSize: 22, fontWeight: 400, color: C.darkGreen, marginBottom: 16 }}>Questions we hear from Bozeman restaurants</h3>
+              <h3 className="dm" style={{ fontSize: 22, fontWeight: 700, color: C.darkGreen, marginBottom: 16 }}>Questions we hear from Bozeman restaurants</h3>
               {faqs.map((f, i) => (
                 <div key={i} style={{ borderBottom: `1px solid ${C.tan}` }}>
                   <button className="acc-btn" onClick={() => setOpenFaq(openFaq === i ? null : i)} style={{ padding: "16px 0", display: "flex", justifyContent: "space-between", gap: 14, alignItems: "center" }}>
@@ -507,7 +507,7 @@ export default function App() {
               <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12 }}>
                 {certLevels.map((l, i) => (
                   <div key={i} style={{ background: l.color, borderRadius: 8, padding: "16px 12px", textAlign: "center" }}>
-                    <div className="pf" style={{ fontSize: 22, color: l.text, marginBottom: 4 }}>{"⭐".repeat(i + 1)}</div>
+                    <div className="dm" style={{ fontSize: 22, color: l.text, marginBottom: 4 }}>{"⭐".repeat(i + 1)}</div>
                     <div className="dm" style={{ fontSize: 13, fontWeight: 600, color: l.text, marginBottom: 2 }}>{l.level}</div>
                     <div className="dm" style={{ fontSize: 11, color: l.text, opacity: 0.85 }}>{l.points} GreenPoints™</div>
                   </div>
@@ -705,7 +705,7 @@ export default function App() {
                     </div>
                   )}
                   <div style={{ fontSize: 28, marginBottom: 10 }}>{tier.icon}</div>
-                  <h3 className="pf" style={{ fontSize: 20, fontWeight: 600, margin: "0 0 3px", color: tier.featured ? C.cream : C.darkGreen }}>{tier.name}</h3>
+                  <h3 className="dm" style={{ fontSize: 20, fontWeight: 700, margin: "0 0 3px", color: tier.featured ? C.cream : C.darkGreen }}>{tier.name}</h3>
                   <p className="dm" style={{ fontSize: 12, margin: "0 0 10px", color: tier.featured ? C.lightSage : C.sage, fontStyle: "italic", fontWeight: 300 }}>{tier.tagline}</p>
                   <p className="dm" style={{ fontSize: 13, lineHeight: 1.65, color: tier.featured ? "#b8d4c0" : C.textMed, margin: "0 0 14px", fontWeight: 300, flexGrow: 1 }}>{tier.desc}</p>
                   <div className="dm" style={{ fontSize: 18, fontWeight: 600, color: tier.featured ? C.gold : C.darkGreen, marginBottom: 14, letterSpacing: "-0.01em" }}>{tier.price}</div>
@@ -733,12 +733,12 @@ export default function App() {
 
             {/* CTA */}
             <div style={{ marginTop: 36, background: C.darkGreen, borderRadius: 12, padding: "36px 32px", textAlign: "center" }}>
-              <h2 className="pf" style={{ fontSize: 28, fontWeight: 400, color: C.cream, margin: "0 0 12px" }}>Ready to get your fork in the ground?</h2>
+              <h2 className="dm" style={{ fontSize: 28, fontWeight: 800, color: C.cream, margin: "0 0 12px" }}>Ready to get your fork in the ground?</h2>
               <p className="dm" style={{ fontSize: 15, color: "#b8d4c0", lineHeight: 1.75, fontWeight: 300, margin: "0 0 28px", maxWidth: 440, marginLeft: "auto", marginRight: "auto" }}>
                 Free 30-minute call. No obligation. We'll tell you honestly where your restaurant stands and what it would actually take to get certified.
               </p>
               <div style={{ display: "inline-block", background: "#ffffff12", border: "1px solid #ffffff20", borderRadius: 10, padding: "20px 28px" }}>
-                <div className="pf" style={{ fontSize: 18, color: C.cream, marginBottom: 4 }}>Garrett Wright</div>
+                <div className="dm" style={{ fontSize: 18, fontWeight: 700, color: C.cream, marginBottom: 4 }}>Garrett Wright</div>
                 <div className="dm" style={{ fontSize: 13, color: C.lightSage, marginBottom: 10, fontWeight: 300 }}>Principal Consultant · Eddy Out Sustainability Consulting</div>
                 <div className="dm" style={{ fontSize: 13, color: C.gold }}>garrett@eddyoutenv.com</div>
                 <div className="dm" style={{ fontSize: 12, color: C.lightSage, marginTop: 4 }}>eddyoutenv.com · Bozeman, Montana</div>
@@ -775,7 +775,7 @@ export default function App() {
               ].map((contact, i) => (
                 <div key={i} style={{ background: "#fff", border: `1px solid ${C.tan}`, borderRadius: 12, padding: "28px 24px" }}>
                   <div style={{ fontSize: 48, marginBottom: 12 }}>{contact.icon}</div>
-                  <h3 className="pf" style={{ fontSize: 18, fontWeight: 600, color: C.darkGreen, margin: "0 0 3px" }}>{contact.name}</h3>
+                  <h3 className="dm" style={{ fontSize: 18, fontWeight: 700, color: C.darkGreen, margin: "0 0 3px" }}>{contact.name}</h3>
                   <p className="dm" style={{ fontSize: 13, color: C.sage, margin: "0 0 4px", fontWeight: 500 }}>{contact.title}</p>
                   <p className="dm" style={{ fontSize: 12, color: C.textLight, margin: "0 0 16px", fontWeight: 300 }}>{contact.role}</p>
                   <div style={{ borderTop: `1px solid ${C.tan}`, paddingTop: 14, marginBottom: 16 }}>
@@ -812,7 +812,7 @@ export default function App() {
 function SH({ title, sub }) {
   return (
     <div style={{ borderBottom: `2px solid ${C.mint}`, paddingBottom: 18 }}>
-      <h2 className="pf" style={{ fontSize: 30, fontWeight: 400, color: C.darkGreen, margin: "0 0 8px" }}>{title}</h2>
+      <h2 className="dm" style={{ fontSize: 30, fontWeight: 800, color: C.darkGreen, margin: "0 0 8px" }}>{title}</h2>
       {sub && <p className="dm" style={{ margin: 0, fontSize: 14, color: C.textLight, lineHeight: 1.6, maxWidth: 580, fontWeight: 300 }}>{sub}</p>}
     </div>
   );
