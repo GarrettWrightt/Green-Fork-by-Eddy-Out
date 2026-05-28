@@ -277,10 +277,12 @@ export default function App() {
 
   const tabs = [
     { id: "overview",    label: "Overview" },
+    { id: "whoWeAre",    label: "Who We Are" },
     { id: "gra",         label: "GRA Certification" },
     { id: "waste",       label: "Waste Roadmap" },
     { id: "incentives",  label: "Financial Incentives" },
     { id: "services",    label: "Services & Pricing" },
+    { id: "contact",     label: "Contact" },
   ];
 
   const faqs = [
@@ -308,8 +310,8 @@ export default function App() {
       {/* TOP NAV */}
       <div style={{ background: "#fff", borderBottom: `1px solid ${C.tan}`, padding: "12px 24px", display: "flex", alignItems: "center", gap: 10 }}>
         <span style={{ fontSize: 22 }}>🌿</span>
-        <span className="dm" style={{ fontWeight: 700, fontSize: 16, color: C.darkGreen, letterSpacing: "-0.01em" }}>Green Fork</span>
-        <span className="dm" style={{ fontSize: 13, color: C.sage, fontWeight: 400 }}>by Eddy Out</span>
+        <span className="dm" style={{ fontWeight: 700, fontSize: 16, color: C.darkGreen, letterSpacing: "-0.01em" }}>Eddy Out</span>
+        <span className="dm" style={{ fontSize: 13, color: C.sage, fontWeight: 400 }}>Sustainability Consulting</span>
         <span className="dm" style={{ fontSize: 12, color: C.textLight, marginLeft: 4 }}>· Bozeman, MT</span>
       </div>
 
@@ -318,14 +320,14 @@ export default function App() {
         <div style={{ position: "absolute", inset: 0, background: `radial-gradient(ellipse at 25% 70%, ${C.midGreen}55 0%, transparent 55%), radial-gradient(ellipse at 75% 20%, ${C.sage}33 0%, transparent 50%)` }} />
         <div style={{ position: "relative", maxWidth: 680, margin: "0 auto" }}>
           <p className="dm" style={{ fontSize: 11, letterSpacing: "0.22em", textTransform: "uppercase", color: C.lightSage, marginBottom: 20, fontWeight: 600 }}>
-            Green Fork by Eddy Out · Bozeman, Montana
+            Eddy Out Sustainability Consulting · Bozeman, Montana
           </p>
           <h1 className="pf" style={{ fontSize: "clamp(28px, 5vw, 50px)", fontWeight: 400, color: C.cream, margin: "0 0 18px", lineHeight: 1.2 }}>
             You're already doing the work.<br />
             <em style={{ color: C.mint }}>Let's get you recognized for it.</em>
           </h1>
           <p className="dm" style={{ fontSize: 16, lineHeight: 1.8, color: "#b8d4c0", maxWidth: 520, margin: "0 auto 36px", fontWeight: 300 }}>
-            Green Fork is a restaurant sustainability certification service by Eddy Out — an independent consultancy born and built in Bozeman. We help local restaurants earn Green Restaurant Association certification and access the financial incentives that come with it, at a price that actually makes sense.
+            We are Eddy Out Sustainability Consulting — an independent consultancy born and built in Bozeman. We help local restaurants earn Green Restaurant Association certification and access the financial incentives that come with it, at a price that actually makes sense.
           </p>
           <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
             {["Built in Bozeman", "By Eddy Out LLC", "GRA Certification Support", "Flat-Rate Pricing"].map(t => (
@@ -338,7 +340,7 @@ export default function App() {
       {/* RECOGNITION BAND */}
       <div style={{ background: C.sand, borderBottom: `1px solid ${C.tan}`, padding: "28px 24px", textAlign: "center" }}>
         <p className="pf" style={{ fontSize: 18, fontStyle: "italic", color: C.darkGreen, margin: "0 0 8px" }}>
-          "Bozeman's restaurant community is already leading on sustainability — farm-to-table sourcing, composting, community partnerships, local supply chains. Green Fork exists to help you document it, formalize it, and get the recognition you deserve."
+          "Bozeman's restaurant community is already leading on sustainability — farm-to-table sourcing, composting, community partnerships, local supply chains. We exist to help you document it, formalize it, and get the recognition you deserve."
         </p>
         <p className="dm" style={{ fontSize: 13, color: C.textLight, margin: 0 }}>— Garrett Wright, Principal Consultant</p>
       </div>
@@ -363,6 +365,61 @@ export default function App() {
       </nav>
 
       <main style={{ maxWidth: 900, margin: "0 auto", padding: "40px 24px 80px" }}>
+
+        {/* ── WHO WE ARE ── */}
+        {tab === "whoWeAre" && (
+          <div>
+            <SH title="Who We Are" sub="Eddy Out Sustainability Consulting is a locally-owned firm dedicated to helping Bozeman's restaurant community document and formalize their sustainability practices." />
+
+            <div style={{ marginTop: 28, background: `${C.midGreen}15`, border: `1px solid ${C.lightSage}`, borderRadius: 10, padding: "20px 24px" }}>
+              <p className="dm" style={{ margin: 0, fontSize: 14, color: C.darkGreen, lineHeight: 1.8, fontWeight: 300 }}>
+                We understand Bozeman's restaurant scene. Our team brings experience in sustainability consulting, local sourcing, and the Green Restaurant Association certification process. We're here to help you turn what you're already doing into formal, recognized, credentialed certification — and to identify the financial incentives available along the way.
+              </p>
+            </div>
+
+            <div style={{ marginTop: 32 }}>
+              <h3 className="pf" style={{ fontSize: 22, fontWeight: 400, color: C.darkGreen, marginBottom: 20 }}>Our Team</h3>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+                {[
+                  {
+                    name: "Garrett Wright",
+                    title: "Principal Consultant",
+                    email: "garrett@eddyoutenv.com",
+                    icon: "👨‍💼",
+                    bio: "Garrett leads Eddy Out's restaurant sustainability consulting practice. He works with Bozeman restaurants to map their GRA certification path, optimize waste reduction, and access federal and state sustainability incentives.",
+                  },
+                  {
+                    name: "Hazel Baur",
+                    title: "Sustainability Consultant",
+                    email: "hazel@eddyoutenv.com",
+                    icon: "👩‍💼",
+                    bio: "Hazel specializes in waste audits, supplier sourcing, and GRA documentation. She brings hands-on experience from the local food and composting sectors and knows Bozeman's restaurant community.",
+                  },
+                ].map((member, i) => (
+                  <div key={i} style={{ background: "#fff", border: `1px solid ${C.tan}`, borderRadius: 12, padding: "24px 20px", textAlign: "center" }}>
+                    <div style={{ fontSize: 48, marginBottom: 12 }}>{member.icon}</div>
+                    <h4 className="pf" style={{ fontSize: 18, fontWeight: 600, color: C.darkGreen, margin: "0 0 3px" }}>{member.name}</h4>
+                    <p className="dm" style={{ fontSize: 13, color: C.sage, margin: "0 0 12px", fontWeight: 500 }}>{member.title}</p>
+                    <p className="dm" style={{ fontSize: 13, color: C.textMed, lineHeight: 1.6, margin: "0 0 14px", fontWeight: 300 }}>{member.bio}</p>
+                    <div style={{ borderTop: `1px solid ${C.tan}`, paddingTop: 12, marginTop: 14 }}>
+                      <a href={`mailto:${member.email}`} style={{ color: C.midGreen, textDecoration: "none", fontSize: 13, fontWeight: 500, fontFamily: "'DM Sans', sans-serif" }}>{member.email}</a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ marginTop: 32, background: C.darkGreen, borderRadius: 12, padding: "28px 24px", textAlign: "center" }}>
+              <h3 className="pf" style={{ fontSize: 20, fontWeight: 400, color: C.cream, margin: "0 0 10px" }}>Built in Bozeman, for Bozeman</h3>
+              <p className="dm" style={{ fontSize: 14, color: "#b8d4c0", lineHeight: 1.7, fontWeight: 300, margin: "0 0 10px" }}>
+                Eddy Out Sustainability Consulting is locally owned and operated. We eat at local restaurants, we shop at local farmers markets, and we're invested in Bozeman's food community. That's not just marketing — it shapes how we work.
+              </p>
+              <p className="dm" style={{ fontSize: 13, color: C.lightSage, lineHeight: 1.7, fontWeight: 300, margin: 0 }}>
+                eddyoutenv.com · Bozeman, Montana
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* ── OVERVIEW ── */}
         {tab === "overview" && (
@@ -682,10 +739,68 @@ export default function App() {
               </p>
               <div style={{ display: "inline-block", background: "#ffffff12", border: "1px solid #ffffff20", borderRadius: 10, padding: "20px 28px" }}>
                 <div className="pf" style={{ fontSize: 18, color: C.cream, marginBottom: 4 }}>Garrett Wright</div>
-                <div className="dm" style={{ fontSize: 13, color: C.lightSage, marginBottom: 10, fontWeight: 300 }}>Green Fork · Eddy Out Sustainability Consulting LLC</div>
-                <div className="dm" style={{ fontSize: 13, color: C.gold }}>Garrett@eddyoutenv.com</div>
+                <div className="dm" style={{ fontSize: 13, color: C.lightSage, marginBottom: 10, fontWeight: 300 }}>Principal Consultant · Eddy Out Sustainability Consulting</div>
+                <div className="dm" style={{ fontSize: 13, color: C.gold }}>garrett@eddyoutenv.com</div>
                 <div className="dm" style={{ fontSize: 12, color: C.lightSage, marginTop: 4 }}>eddyoutenv.com · Bozeman, Montana</div>
               </div>
+            </div>
+          </div>
+        )}
+
+        {/* ── CONTACT ── */}
+        {tab === "contact" && (
+          <div>
+            <SH title="Get in Touch" sub="Let's talk about your restaurant's sustainability goals. Schedule a free 30-minute consultation or reach out directly." />
+
+            <div style={{ marginTop: 28, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
+              {[
+                {
+                  name: "Garrett Wright",
+                  title: "Principal Consultant",
+                  email: "garrett@eddyoutenv.com",
+                  role: "GRA Certification · Sustainability Strategy",
+                  icon: "📅",
+                  cta: "Schedule a Call",
+                  link: "https://calendar.app.google/CkJPGH8vXZZiMxQL6",
+                },
+                {
+                  name: "Hazel Baur",
+                  title: "Sustainability Consultant",
+                  email: "hazel@eddyoutenv.com",
+                  role: "Waste Audits · Supplier Sourcing",
+                  icon: "💬",
+                  cta: "Email Hazel",
+                  link: "mailto:hazel@eddyoutenv.com",
+                },
+              ].map((contact, i) => (
+                <div key={i} style={{ background: "#fff", border: `1px solid ${C.tan}`, borderRadius: 12, padding: "28px 24px" }}>
+                  <div style={{ fontSize: 48, marginBottom: 12 }}>{contact.icon}</div>
+                  <h3 className="pf" style={{ fontSize: 18, fontWeight: 600, color: C.darkGreen, margin: "0 0 3px" }}>{contact.name}</h3>
+                  <p className="dm" style={{ fontSize: 13, color: C.sage, margin: "0 0 4px", fontWeight: 500 }}>{contact.title}</p>
+                  <p className="dm" style={{ fontSize: 12, color: C.textLight, margin: "0 0 16px", fontWeight: 300 }}>{contact.role}</p>
+                  <div style={{ borderTop: `1px solid ${C.tan}`, paddingTop: 14, marginBottom: 16 }}>
+                    <p className="dm" style={{ fontSize: 12, color: C.textMed, margin: "0 0 8px", fontWeight: 400 }}>Email</p>
+                    <a href={`mailto:${contact.email}`} style={{ color: C.midGreen, textDecoration: "none", fontSize: 13, fontWeight: 500, fontFamily: "'DM Sans', sans-serif", display: "block", marginBottom: 14 }}>{contact.email}</a>
+                  </div>
+                  <a href={contact.link} target="_blank" rel="noopener noreferrer" style={{ display: "block", background: C.darkGreen, color: C.cream, textDecoration: "none", padding: "12px 16px", borderRadius: 8, textAlign: "center", fontSize: 13, fontWeight: 600, fontFamily: "'DM Sans', sans-serif", transition: "background 0.2s" }}>{contact.cta}</a>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ marginTop: 32, background: `${C.midGreen}15`, border: `1px solid ${C.lightSage}`, borderRadius: 10, padding: "20px 24px" }}>
+              <p className="dm" style={{ margin: 0, fontSize: 14, color: C.darkGreen, lineHeight: 1.8, fontWeight: 300 }}>
+                <strong>Free 30-minute consultation.</strong> No obligation, no pitch. We'll listen to your restaurant's current practices, answer questions about GRA certification, and tell you honestly what it would take to get certified and start earning incentives.
+              </p>
+            </div>
+
+            <div style={{ marginTop: 28, background: C.cream, border: `1px solid ${C.tan}`, borderRadius: 10, padding: "20px 24px" }}>
+              <h3 className="dm" style={{ fontSize: 13, fontWeight: 600, color: C.darkGreen, margin: "0 0 8px", letterSpacing: "0.1em", textTransform: "uppercase" }}>Our Location</h3>
+              <p className="dm" style={{ margin: 0, fontSize: 13, color: C.textMed, lineHeight: 1.7, fontWeight: 300 }}>
+                Eddy Out Sustainability Consulting<br />
+                Bozeman, Montana<br />
+                <br />
+                We work with restaurants throughout Bozeman and the Gallatin Valley. Initial audits are conducted on-site at your restaurant.
+              </p>
             </div>
           </div>
         )}
