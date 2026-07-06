@@ -686,49 +686,32 @@ export default function App() {
         {/* ── SERVICES & PRICING ── */}
         {tab === "services" && (
           <div>
-            <SH title="Services & Pricing" sub="Three flat-rate packages. No hourly billing. No surprises. One price covers everything from first audit to final certification." />
+            <SH title="Services & Pricing" sub="We work alongside you from first audit to certified status — and we structure every engagement around what works for your operation." />
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginTop: 28 }}>
-              {tiers.map((tier, i) => (
-                <div key={i} style={{
-                  background: tier.featured ? C.darkGreen : "#fff",
-                  border: tier.featured ? `2px solid ${C.gold}` : `1px solid ${C.tan}`,
-                  borderRadius: 12,
-                  padding: "26px 22px",
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                }}>
-                  {tier.featured && (
-                    <div className="dm" style={{ position: "absolute", top: -11, left: "50%", transform: "translateX(-50%)", background: C.gold, color: C.darkGreen, fontSize: 10, fontWeight: 700, letterSpacing: "0.1em", padding: "3px 14px", borderRadius: 12, whiteSpace: "nowrap" }}>
-                      MOST POPULAR
-                    </div>
-                  )}
-                  <div style={{ fontSize: 28, marginBottom: 10 }}>{tier.icon}</div>
-                  <h3 className="dm" style={{ fontSize: 20, fontWeight: 700, margin: "0 0 3px", color: tier.featured ? C.cream : C.darkGreen }}>{tier.name}</h3>
-                  <p className="dm" style={{ fontSize: 12, margin: "0 0 10px", color: tier.featured ? C.lightSage : C.sage, fontStyle: "italic", fontWeight: 300 }}>{tier.tagline}</p>
-                  <p className="dm" style={{ fontSize: 13, lineHeight: 1.65, color: tier.featured ? "#b8d4c0" : C.textMed, margin: "0 0 14px", fontWeight: 300, flexGrow: 1 }}>{tier.desc}</p>
-                  <div className="dm" style={{ fontSize: 18, fontWeight: 600, color: tier.featured ? C.gold : C.darkGreen, marginBottom: 14, letterSpacing: "-0.01em" }}>{tier.price}</div>
-                  <div style={{ borderTop: `1px solid ${tier.featured ? "#ffffff20" : C.tan}`, paddingTop: 14 }}>
-                    {tier.deliverables.map((d, j) => (
-                      <div key={j} className="dm" style={{ display: "flex", gap: 8, marginBottom: 7, fontSize: 12, lineHeight: 1.5, color: tier.featured ? "#c8dece" : C.textMed, fontWeight: 300, alignItems: "flex-start" }}>
-                        <span style={{ color: tier.featured ? C.lightSage : C.midGreen, flexShrink: 0, fontWeight: 700 }}>✓</span>{d}
-                      </div>
-                    ))}
-                    <div style={{ marginTop: 14, padding: "10px 12px", background: tier.featured ? "#ffffff15" : `${C.midGreen}10`, borderRadius: 6 }}>
-                      <p className="dm" style={{ margin: 0, fontSize: 12, color: tier.featured ? C.mint : C.darkGreen, fontStyle: "italic", fontWeight: 300, lineHeight: 1.5 }}>
-                        <strong>Outcome:</strong> {tier.outcome}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div style={{ marginTop: 28, background: C.darkGreen, borderRadius: 12, padding: "36px 32px", textAlign: "center" }}>
+              <div style={{ fontSize: 40, marginBottom: 16 }}>🤝</div>
+              <h3 className="dm" style={{ fontSize: 24, fontWeight: 800, color: C.cream, margin: "0 0 14px" }}>We work within your budget.</h3>
+              <p className="dm" style={{ fontSize: 16, color: "#b8d4c0", lineHeight: 1.8, fontWeight: 300, maxWidth: 520, margin: "0 auto 20px" }}>
+                Every restaurant has a bottom line — and we respect that. We don't believe sustainability consulting should be out of reach for independent operators. When you reach out, we'll have an honest conversation about what you need, what makes sense for your size and stage, and what we can build together.
+              </p>
+              <p className="dm" style={{ fontSize: 14, color: C.lightSage, lineHeight: 1.7, fontWeight: 300, maxWidth: 460, margin: "0 auto" }}>
+                No rigid packages. No pressure to buy more than you need. Just a straightforward engagement built around your goals and what's realistic for your operation right now.
+              </p>
             </div>
 
-            <div style={{ marginTop: 28, background: `${C.gold}15`, border: `1px solid ${C.gold}44`, borderRadius: 10, padding: "16px 20px" }}>
-              <p className="dm" style={{ margin: 0, fontSize: 13, color: C.charcoal, lineHeight: 1.7 }}>
-                <strong style={{ color: C.darkGreen }}>Pricing note:</strong> All packages are flat-rate — what you see is what you pay. Final pricing reflects restaurant size, operational complexity, and number of locations. Add-ons available for specialty GRA badges (Vegan, Zero Waste, Sustainable Seafood), annual re-certification support, and social media content packages.
-              </p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16, marginTop: 28 }}>
+              {[
+                { icon: "🔍", t: "Sustainability Audit", d: "On-site review across all 8 GRA categories — we tell you exactly where you stand and what it would take to certify." },
+                { icon: "📋", t: "Certification Support", d: "We handle the GRA application process alongside you — the planning, documentation, and submission." },
+                { icon: "♻️", t: "Waste Reduction", d: "Custom composting, donation, and recycling programs that cut costs and earn GreenPoints™." },
+                { icon: "💰", t: "Incentive Identification", d: "We find every applicable federal and state financial incentive for your specific operation." },
+              ].map((s, i) => (
+                <div key={i} className="card" style={{ background: "#fff", border: `1px solid ${C.tan}`, borderRadius: 10, padding: "22px 18px" }}>
+                  <div style={{ fontSize: 28, marginBottom: 10 }}>{s.icon}</div>
+                  <h4 className="dm" style={{ fontSize: 14, fontWeight: 700, margin: "0 0 6px", color: C.darkGreen }}>{s.t}</h4>
+                  <p className="dm" style={{ fontSize: 13, lineHeight: 1.65, color: C.textLight, margin: 0, fontWeight: 300 }}>{s.d}</p>
+                </div>
+              ))}
             </div>
 
             {/* CTA */}
